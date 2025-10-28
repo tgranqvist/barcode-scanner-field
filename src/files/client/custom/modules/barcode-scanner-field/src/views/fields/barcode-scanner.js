@@ -11,7 +11,7 @@ class BarcodeScannerFieldView extends BaseFieldView {
     editTemplate = 'barcode-scanner-field:fields/edit';
     listTemplate = 'barcode-scanner-field:fields/list';
 
-    validations = ['required', 'pattern'];
+    validations = ['required'];
 
     #sound;
 
