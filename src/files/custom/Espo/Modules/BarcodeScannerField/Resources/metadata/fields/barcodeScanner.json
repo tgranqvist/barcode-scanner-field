@@ -1,0 +1,21 @@
+{
+    "view": "barcode-scanner-field:views/fields/barcode-scanner",
+    "personalData": true,
+    "textFilter": true,
+    "params": [
+        {
+            "name": "required",
+            "type": "bool",
+            "default": false
+        },
+        {
+            "name": "playSound",
+            "type": "bool",
+            "default": false
+        }
+    ],
+    "validationList": [
+        "required",
+        "pattern"
+    ]
+}

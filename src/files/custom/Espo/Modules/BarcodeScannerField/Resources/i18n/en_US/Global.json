@@ -1,0 +1,10 @@
+{
+    "fieldTypes": {
+        "barcodeScanner": "Barcode Scanner"
+    },
+    "fields": {
+        "playSound": "Play Sound on Scan",
+        "personalData": "Is Personal Data",
+        "isBlorg": "Is this a blorg value"
+    }
+}

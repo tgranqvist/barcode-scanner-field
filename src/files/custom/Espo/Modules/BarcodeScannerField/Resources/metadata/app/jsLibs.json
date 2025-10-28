@@ -1,0 +1,8 @@
+{
+    "zxing": {
+        "path": "client/custom/modules/barcode-scanner-field/lib/zxing.js"
+    },
+    "zxing-adapter": {
+        "path": "client/custom/modules/barcode-scanner-field/lib/zxingAdapter.js"
+    }
+}

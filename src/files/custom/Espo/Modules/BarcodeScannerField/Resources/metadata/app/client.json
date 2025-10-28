@@ -1,0 +1,6 @@
+{
+  "scriptList": [
+      "__APPEND__",
+      "client/custom/modules/barcode-scanner-field/lib/init.js"
+  ]
+}

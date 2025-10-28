@@ -1,0 +1,14 @@
+{
+    "module": "BarcodeScannerField",
+    "name": "Barcode Scanner Field",
+    "description": "A form field supporting the scanning of barcodes.",
+    "author": "Tom Granqvist",
+    "bundled": true,
+    "acceptableVersions": [
+        ">=9.1.0"
+    ],
+    "php": [
+        ">=8.2"
+    ],
+    "scripts": []
+}
