@@ -1,10 +1,8 @@
 {
-    "fieldTypes": {
-        "barcodeScanner": "Barcode Scanner"
+    "scopeNames": {
+        "Test": "Test"
     },
-    "fields": {
-        "playSound": "Play Sound on Scan",
-        "personalData": "Is Personal Data",
-        "isBlorg": "Is this a blorg value"
+    "scopeNamesPlural": {
+        "Test": "Tests"
     }
 }

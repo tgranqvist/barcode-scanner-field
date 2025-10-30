@@ -1,0 +1,37 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities"
+            },
+            {
+                "name": "history",
+                "reference": "history"
+            },
+            {
+                "name": "tasks",
+                "reference": "tasks"
+            }
+        ]
+    },
+    "bottomPanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            }
+        ]
+    },
+    "iconClass": "fas fa-person-circle-exclamation"
+}

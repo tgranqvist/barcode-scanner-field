@@ -1,0 +1,13 @@
+{
+  "fields": {
+    "address": "Osoite"
+  },
+  "links": {
+    "meetings": "Kokoukset",
+    "calls": "Puhelut",
+    "tasks": "Tehtävät"
+  },
+  "labels": {
+    "Create Test": "Uusi Testi"
+  }
+}
