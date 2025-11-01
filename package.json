@@ -1,6 +1,6 @@
 {
   "name": "espocrm-ext-barcode-scanner-field",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "sa": "node build --copy && node build --composer-install && php site/vendor/bin/phpstan",
