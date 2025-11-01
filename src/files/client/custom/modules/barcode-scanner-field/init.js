@@ -6,7 +6,7 @@ define(['zxing'], function(zxing) {
 
         class ZXingDetectorAdapter {
             constructor() {
-            this.reader = new BrowserMultiFormatReader();
+                this.reader = new BrowserMultiFormatReader();
             }
 
             async detect(videoElement) {
