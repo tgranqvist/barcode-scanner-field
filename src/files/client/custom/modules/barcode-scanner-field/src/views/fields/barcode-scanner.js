@@ -1,5 +1,4 @@
 import BaseFieldView from 'views/fields/base';
-import ZXingDetectorAdapter from 'zxing-adapter';
 
 /**
  * A custom Espo field that supports barcode scanning using device
@@ -17,10 +16,6 @@ class BarcodeScannerFieldView extends BaseFieldView {
 
     constructor(options) {
         super(options);
-        if (!('BarcodeDetector' in window)) {
-            console.log('Polyfilling barcode detector API');
-            window['BarcodeDetector'] = ZXingDetectorAdapter;
-        }
     }
     
     setup() {
