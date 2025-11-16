@@ -1,5 +1,8 @@
 {
     "fieldTypes": {
         "barcodeScanner": "Streckkodsläsare"
+    },
+    "fields": {
+        "playSound": "Ljudsignal efter skanning"
     }
 }

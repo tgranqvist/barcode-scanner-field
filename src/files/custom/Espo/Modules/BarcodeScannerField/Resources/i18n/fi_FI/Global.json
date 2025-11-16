@@ -1,5 +1,8 @@
 {
     "fieldTypes": {
         "barcodeScanner": "Viivakoodinlukija"
+    },
+    "fields": {
+        "playSound": "Äänimerkki skannauksen jälkeen"
     }
 }

@@ -4,5 +4,11 @@
     },
     "scopeNamesPlural": {
         "Test": "Tests"
+    },
+    "fieldTypes": {
+        "barcodeScanner": "Barcode Scanner"
+    },
+    "fields": {
+        "playSound": "Play Sound on Scan"
     }
 }
