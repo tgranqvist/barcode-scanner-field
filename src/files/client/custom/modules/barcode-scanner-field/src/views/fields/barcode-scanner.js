@@ -2,8 +2,7 @@ import BaseFieldView from 'views/fields/base';
 
 /**
  * A custom Espo field that supports barcode scanning using device
- * camera or webcam. It uses either the native BarcodeDetector API
- * or as small polyfill using ZXing's zxing-js/browser.
+ * camera or webcam.
  */
 class BarcodeScannerFieldView extends BaseFieldView {
     type = 'barcodeScanner';
@@ -27,33 +26,22 @@ class BarcodeScannerFieldView extends BaseFieldView {
     }
 
     async openScanner() {
-        const stream = await navigator.mediaDevices.getUserMedia({
-            video: {facingMode: "environment"}, 
-            audio: false
+        /* getParentView is crucial, as creating a view on `this` leads
+           to the camera popup to be rerendered on a closed video stream
+           whenever the value is set, giving nasty errors.
+        */
+        const parent = this.getParentView();
+        const scannerView = await parent.createView(
+            'scanner',
+            'barcode-scanner-field:views/modals/scanner-view'
+        );
+        scannerView.once('scanned', (code) => {
+            if (this.params.playSound) {
+                this.#sound.play();
+            }
+            this.model.set(this.name, code);
         });
-        const dialog = Espo.Ui.dialog({
-            headerText: 'Scan code',
-            backdrop: 'true',
-            body: '<video id="barcode-video" autoplay muted style="display:block; margin:0 auto; width:100%; max-width:480px; height:auto; max-height: 40vh; background: #000; border-radius:4px;"></video>'
-        });
-
-        dialog.show();
-        const videoElement = dialog.$el.find('#barcode-video').get(0);
-        videoElement.srcObject = stream;
-
-        const barcodes = await (new BarcodeDetector()).detect(videoElement);
-        if (!barcodes.length) return;
-        if (this.params.playSound) {
-            this.#sound.play().catch(() => console.log('Unable to play sound'));
-        }
-        this.model.set(this.name, barcodes[0].rawValue);
-        dialog.close();
-        
-        dialog.onClose = () => {
-            console.log('closing dialog');
-            stream.getTracks().forEach(t => t.stop());
-            videoElement.srcObject = null;
-        };
+        scannerView.render();
     }
 }
 
