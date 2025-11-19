@@ -1,0 +1,10 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "views": {
+        "list": "barcode-scanner-field:views/list"
+    },
+    "iconClass": "fas fa-lightbulb"
+}
