@@ -4,6 +4,8 @@
         "link": true
     },
     {
-        "name": "code"
+        "name": "code",
+        "width": 8,
+        "align": "left"
     }
 ]

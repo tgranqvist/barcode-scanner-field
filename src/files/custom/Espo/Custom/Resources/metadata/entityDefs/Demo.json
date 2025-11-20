@@ -63,7 +63,11 @@
     },
     "collection": {
         "orderBy": "createdAt",
-        "order": "desc"
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "code"
+        ]
     },
     "indexes": {
         "name": {
